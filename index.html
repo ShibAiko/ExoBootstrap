@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +12,50 @@
 
 
 </head>
+
 <body>
+
     <div class="container">
-        <div class="col-8">
-            <p>Second niveau avec 8 colonnes</p>
-            <div class="col-4">
-                <p>Troisième niveau avec 4 colonnes</p>
+        <div class="row">
+            <div class="row">
+                <p>premier niveau avec 12 colonnes</p>
             </div>
-            <div class="col-6">
-                <p>troisième niveau avec 6 colonnes</p>
-                <div class="col-3">
-                    <p>quatrième niveau avec 3 colonnes</p>
+            <div class="row">
+                <div class="col-8">
+                    <div class="row">
+                        <p>second niveau avec 8 colonnes</p>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-4 align-self-start">
+                            <p>troisieme niveau avec 4 colonnes</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <p>troisième paragraphe avec 6 colonnes</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 offset-md-1">
+                                    <p>quatrieme niveau avec 3 colonnes</p>
+                                </div>
+                                <div class="col-5 align-self-start offset-md-1">
+                                    <p>quatrieme niveau avec 5 colonnes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5">
-                    <p>quatrième niveau avec 5 colonnes</p>
+                <div class="col-4 align-self-start">
+                    <div class="row">
+                        <p>second niveau avec 4 colonnes</p>
+                    </div>
                 </div>
+
             </div>
 
         </div>
-        <div class="col-4">
-            <p>Second niveau avec 4 colonnes</p>
-        </div>
+
     </div>
+
 </body>
+
 </html>
