@@ -1,12 +1,87 @@
-
-div{
-    border: solid 1px black;
-    border-radius: 10px;
-
-    text-align: center;
+body{
+    padding: 10%;
+    background-color:lightgrey;
 }
 
-.row{
-    border: 0;
+main{
+}
 
+section{
+
+}
+
+.carousel-caption{
+    font-size: 2em;
+    text-shadow: 1px 1px 2px black;
+    font-weight: bolder;
+}
+
+main div div{
+    margin: 1em;
+}
+
+#fingerRound{
+    width: 100%;
+}
+
+/*-----div "stack"-----*/
+
+.stack {
+    margin: auto;
+    display: grid;
+    grid-template-areas: "stack";  /* . ???? . */
+}
+
+/*-----Crée le cadre a chaque image contenu dans la div "stack"-----*/
+
+.stack > img{
+    grid-area: stack;   /* . ???? . */
+    width: 100%;    
+    aspect-ratio: 1;
+    object-fit: cover; 
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.5); /* attribut une ombre moitié moins que noire*/
+    border: solid 0.5rem white;
+    border-bottom: solid 3rem white;
+    border-radius: 0.5rem;
+    transition: transform 200ms;
+}
+
+/*----- ÉTAT IMAGE AVANT -----*/
+
+.stack > img:nth-child(1){
+    transform:
+        rotate(5deg)
+        translateX(1.25rem)
+        translateY(-1.25rem);
+}
+
+.stack > img:nth-child(2){
+    transform:
+        rotate(-10deg)
+        translateX(-1.25rem);
+}
+
+.stack > img:nth-child(3){
+    transform:
+        rotate(0deg);
+}
+
+/*-----ÉTAT IMAGE AU SURVOL-----*/
+
+.stack:hover> img:nth-child(1){
+    transform:
+        rotate(10deg)
+        translateX(2.25rem)
+        translateY(-2.25rem);
+}
+
+.stack:hover > img:nth-child(2){
+    transform:
+        rotate(-20deg)
+        translateX(-3.75rem);
+}
+
+.stack:hover > img:nth-child(3){
+    transform:
+        rotate(0deg);
 }

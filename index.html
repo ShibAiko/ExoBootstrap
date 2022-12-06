@@ -9,52 +9,118 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-
-
 </head>
 
 <body>
 
-    <div class="container">
-
-            <div class="row">
-                <p>premier niveau avec 12 colonnes</p>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <div class="row">
-                        <p>second niveau avec 8 colonnes</p>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="col-4 align-self-start">
-                            <p>troisieme niveau avec 4 colonnes</p>
-                        </div>
-                        <div class="col-6">
-                            <div class="row">
-                                <p>troisième paragraphe avec 6 colonnes</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-3 offset-md-1">
-                                    <p>quatrieme niveau avec 3 colonnes</p>
+    <main>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-10">
+                    <section>
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://picsum.photos/id/200/600/400" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption"> Titre 1</div>
                                 </div>
-                                <div class="col-5 align-self-start offset-md-1">
-                                    <p>quatrieme niveau avec 5 colonnes</p>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/id/201/600/400" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption"> Titre 2</div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://picsum.photos/id/202/600/400" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption"> Titre 3</div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row row justify-content-evenly">
+                <div class="col-3 text-center">
+                    <div class="stack">
+                        <img src="https://picsum.photos/id/120/500/" alt="">
+                        <img src="https://picsum.photos/id/25/500/" alt="">
+                        <img src="https://picsum.photos/500/" alt="">
+                    </div>
+                </div>
+                <div class="col-2 text-center">
+                    <div class="row align-items-start">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Inscrit toi !</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Inscrit toi !</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Nom:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Prénom:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Mail:</label>
+                                                <input type="email" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Mot de passe:</label>
+                                                <input type="password" class="form-control" id="recipient-name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                        <button type="button" class="btn btn-primary">S'inscrire</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Ne clique pas içi !
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Et voila ...</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img id="fingerRound" src="img/saviez-vous-que-le-jeu-du-rond-provient-d-une-celebre-serie.jpg" alt="">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 align-self-start">
-                    <div class="row">
-                        <p>second niveau avec 4 colonnes</p>
-                    </div>
-                </div>
-
             </div>
-
-
-
-    </div>
+        <div></div>
+    </main>
 
 </body>
 
